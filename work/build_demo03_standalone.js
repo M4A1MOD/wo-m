@@ -1,0 +1,18 @@
+const fs = require('fs')
+const path = require('path')
+
+const root = path.resolve(__dirname, '..')
+const dist = path.join(root, 'platform', 'frontend', 'dist')
+const indexPath = path.join(dist, 'index.html')
+const outputPath = path.join(root, 'outputs', '智能互动教学平台-demo0.3.html')
+
+let html = fs.readFileSync(indexPath, 'utf8')
+const jsMatch = html.match(/<script[^>]*src="\.\/assets\/([^"]+\.js)"[^>]*><\/script>/)
+const cssMatch = html.match(/<link[^>]*href="\.\/assets\/([^"]+\.css)"[^>]*>/)
+if (!jsMatch || !cssMatch) throw new Error('无法识别 Vite 构建产物')
+
+const js = fs.readFileSync(path.join(dist, 'assets', jsMatch[1]), 'utf8').replaceAll('</script', '<\\/script')
+const css = fs.readFileSync(path.join(dist, 'assets', cssMatch[1]), 'utf8').replaceAll('</style', '<\\/style')
+html = html.replace(jsMatch[0], () => `<script type="module">${js}</script>`).replace(cssMatch[0], () => `<style>${css}</style>`)
+fs.writeFileSync(outputPath, html, 'utf8')
+console.log(`DEMO03_STANDALONE_OK ${outputPath} ${Buffer.byteLength(html)} bytes`)

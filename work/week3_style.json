@@ -1,0 +1,131 @@
+{
+  "input": "C:\\Users\\d1828\\Documents\\Codex\\2026-09-04\\wo-m\\\u5b66\u53f7_\u59d3\u540d_\u8f6f\u4ef6\u5de5\u7a0b\u4e13\u4e1a\u89c1\u4e60\u5468\u5fd7-\u7b2c1\u5468-Demo0.2.docx",
+  "fonts_by_char_count": {
+    "\u5b8b\u4f53": 3998,
+    "\u9ed1\u4f53": 10
+  },
+  "direct_run_formatting_runs": 92,
+  "direct_paragraph_formatting_paragraphs": 17,
+  "heading_like_paragraphs_not_heading_style": [
+    {
+      "para_index": 1,
+      "text": "\u8f6f\u4ef6\u5de5\u7a0b\u4e13\u4e1a\u89c1\u4e60\u5468\u5fd7",
+      "style": "Normal"
+    },
+    {
+      "para_index": 3,
+      "text": "\u4e13 \u4e1a",
+      "style": "Normal"
+    },
+    {
+      "para_index": 6,
+      "text": "\u5e74 \u7ea7",
+      "style": "Normal"
+    },
+    {
+      "para_index": 9,
+      "text": "\u5468 \u6b21",
+      "style": "Normal"
+    },
+    {
+      "para_index": 11,
+      "text": "\u65f6 \u95f4",
+      "style": "Normal"
+    },
+    {
+      "para_index": 15,
+      "text": "\u59d3 \u540d",
+      "style": "Normal"
+    },
+    {
+      "para_index": 17,
+      "text": "\u5b66 \u53f7",
+      "style": "Normal"
+    },
+    {
+      "para_index": 19,
+      "text": "\u73ed \u7ea7",
+      "style": "Normal"
+    },
+    {
+      "para_index": 21,
+      "text": "\u89c1\u4e60\u5730\u70b9",
+      "style": "Normal"
+    },
+    {
+      "para_index": 22,
+      "text": "\u89c1\u4e60\u5730\u70b9",
+      "style": "Normal"
+    },
+    {
+      "para_index": 27,
+      "text": "\u89c1 \u4e60 \u5185 \u5bb9",
+      "style": "Normal"
+    },
+    {
+      "para_index": 58,
+      "text": "\u89c1 \u4e60 \u5fc3 \u5f97",
+      "style": "Normal"
+    }
+  ],
+  "examples": {
+    "direct_paragraph_formatting": [
+      {
+        "para_index": 1,
+        "text": "\u8f6f\u4ef6\u5de5\u7a0b\u4e13\u4e1a\u89c1\u4e60\u5468\u5fd7",
+        "style": "Normal"
+      },
+      {
+        "para_index": 2,
+        "text": "",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "text": "\u4e13 \u4e1a",
+        "style": "Normal"
+      },
+      {
+        "para_index": 4,
+        "text": "\u8f6f\u4ef6\u5de5\u7a0b",
+        "style": "Normal"
+      },
+      {
+        "para_index": 5,
+        "text": "\u8f6f\u4ef6\u5de5\u7a0b",
+        "style": "Normal"
+      }
+    ],
+    "direct_run_formatting": [
+      {
+        "para_index": 1,
+        "run_text": "\u8f6f\u4ef6\u5de5\u7a0b\u4e13\u4e1a\u89c1\u4e60\u5468\u5fd7",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "\u4e13",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": " ",
+        "style": "Normal"
+      },
+      {
+        "para_index": 3,
+        "run_text": "\u4e1a",
+        "style": "Normal"
+      },
+      {
+        "para_index": 4,
+        "run_text": "\u8f6f\u4ef6\u5de5\u7a0b",
+        "style": "Normal"
+      }
+    ]
+  },
+  "notes": [
+    "Direct formatting is not always wrong, but it often causes inconsistent output when templates change.",
+    "Heading-like paragraphs not using Heading styles can break TOC and accessibility."
+  ]
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="900" viewBox="0 0 1320 900">
+  <defs><style>.t{font:700 32px 'Microsoft YaHei';fill:#182230}.n{font:500 17px 'Microsoft YaHei';fill:#182230}.s{font:400 15px 'Microsoft YaHei';fill:#52647a}.u{fill:#fff;stroke:#869ac7;stroke-width:2}.l{stroke:#65758c;stroke-width:2;fill:none}</style></defs>
+  <rect width="1320" height="900" fill="#f8fafc"/><text x="660" y="52" text-anchor="middle" class="t">智能互动教学平台核心用例图</text>
+  <rect x="270" y="95" width="790" height="750" rx="24" fill="#eef3ff" stroke="#9aade0" stroke-width="2"/><text x="665" y="128" text-anchor="middle" class="s">智能互动教学平台</text>
+  <circle cx="110" cy="265" r="35" class="u"/><path d="M110 300 L110 405 M55 345 L165 345 M110 405 L65 480 M110 405 L155 480" class="l"/><text x="110" y="520" text-anchor="middle" class="n">教师</text>
+  <circle cx="110" cy="625" r="35" class="u"/><path d="M110 660 L110 765 M55 705 L165 705 M110 765 L65 840 M110 765 L155 840" class="l"/><text x="110" y="875" text-anchor="middle" class="n">学生</text>
+  <circle cx="1190" cy="440" r="35" class="u"/><path d="M1190 475 L1190 580 M1135 520 L1245 520 M1190 580 L1145 655 M1190 580 L1235 655" class="l"/><text x="1190" y="695" text-anchor="middle" class="n">管理员</text>
+  <g class="u"><ellipse cx="470" cy="205" rx="135" ry="48"/><ellipse cx="780" cy="205" rx="135" ry="48"/><ellipse cx="470" cy="340" rx="135" ry="48"/><ellipse cx="780" cy="340" rx="135" ry="48"/><ellipse cx="470" cy="475" rx="135" ry="48"/><ellipse cx="780" cy="475" rx="135" ry="48"/><ellipse cx="470" cy="610" rx="135" ry="48"/><ellipse cx="780" cy="610" rx="135" ry="48"/><ellipse cx="625" cy="750" rx="150" ry="48"/></g>
+  <g text-anchor="middle" class="n"><text x="470" y="212">登录与身份认证</text><text x="780" y="212">管理课程与资料</text><text x="470" y="347">生成课堂内容</text><text x="780" y="347">编辑审核并发布</text><text x="470" y="482">进入互动课堂</text><text x="780" y="482">向 AI 教师提问</text><text x="470" y="617">完成测验</text><text x="780" y="617">查看反馈与结果</text><text x="625" y="757">用户配置与操作审计</text></g>
+  <path d="M165 330 L335 220 M165 340 L645 220 M165 355 L335 340 M165 370 L645 340" class="l"/>
+  <path d="M165 690 L335 475 M165 705 L645 475 M165 720 L335 610 M165 735 L645 610" class="l"/>
+  <path d="M1155 500 L925 205 M1155 515 L915 750" class="l"/>
+</svg>
