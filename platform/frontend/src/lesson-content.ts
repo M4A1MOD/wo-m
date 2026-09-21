@@ -1,9 +1,13 @@
 export type Quiz = {
+  type?: 'single' | 'multiple' | 'short'
   question: string
   options: string[]
   answer: number
   analysis: string
   knowledge: string
+  answers?: number[]
+  reference_answer?: string
+  rubric?: string[]
 }
 
 export type Scene = {
@@ -21,6 +25,7 @@ export type Scene = {
 export type LessonPlan = {
   version: '0.3' | '0.4'
   title: string
+  description?: string
   subject: string
   grade: string
   duration: number
@@ -134,11 +139,23 @@ export const seedLessons = [
   createLesson('牛顿第二定律', '物理', '高一'),
 ]
 
+export function resizeLessonDuration(lesson: LessonPlan, duration: number): LessonPlan {
+  const totalWeight = lesson.scenes.reduce((total, scene) => total + scene.duration, 0)
+  const scaled = lesson.scenes.map(scene => scene.duration * duration / totalWeight)
+  const durations = scaled.map(value => Math.floor(value))
+  const remainderOrder = scaled.map((value, index) => ({ index, remainder: value % 1 }))
+    .sort((first, second) => second.remainder - first.remainder)
+  const remaining = duration - durations.reduce((total, value) => total + value, 0)
+  remainderOrder.slice(0, remaining).forEach(({ index }) => durations[index]++)
+  return { ...lesson, duration, scenes: lesson.scenes.map((scene, index) => ({ ...scene, duration: durations[index] })) }
+}
+
 export function mergeGeneratedLesson(base: LessonPlan, generated: any): LessonPlan {
   if (!generated || !Array.isArray(generated.scenes)) return base
   return {
     ...base,
     title: generated.title || base.title,
+    description: base.description,
     subject: generated.subject || base.subject,
     grade: generated.grade || base.grade,
     duration: generated.duration || base.duration,
@@ -157,6 +174,10 @@ export function mergeGeneratedLesson(base: LessonPlan, generated: any): LessonPl
       knowledge: scene.knowledge_points || scene.knowledge || [],
     })),
     quiz: generated.quiz?.length ? generated.quiz.map((quiz: any) => ({
+      type: quiz.type || 'single',
+      answers: quiz.answers || [],
+      reference_answer: quiz.reference_answer || '',
+      rubric: quiz.rubric || [],
       question: quiz.question,
       options: quiz.options,
       answer: quiz.answer,

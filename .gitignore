@@ -1,0 +1,24 @@
+# Local applications and development workspaces
+/project-image-asset-generator/
+/work/
+/.build-demo04/
+/.pnpm-store/
+/.blocked-node-modules/
+
+# Runtime data and generated outputs
+/.runtime/
+/outputs/
+/qa_weeklog/
+/platform/backend/.tools/
+/platform/backend/data/
+/platform/frontend/.npm-cache/
+
+# Local-only package-manager files
+/platform/frontend/pnpm-lock.yaml
+/platform/frontend/pnpm-workspace.yaml
+
+# Operating-system and temporary files
+.DS_Store
+Thumbs.db
+*.tmp
+

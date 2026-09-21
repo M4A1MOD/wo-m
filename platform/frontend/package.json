@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "build:demo": "npm run build && node ../../work/build_demo04_standalone.js",
+    "build:demo": "npm run build",
     "test": "vitest"
   },
   "dependencies": {

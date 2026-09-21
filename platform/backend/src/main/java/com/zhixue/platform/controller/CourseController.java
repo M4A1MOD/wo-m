@@ -17,7 +17,7 @@ public class CourseController {
     public CourseController(CourseRepository repository){this.repository=repository;}
     @GetMapping public ApiResponse<List<Course>> list(){return ApiResponse.ok(repository.findAll());}
     @GetMapping("/{id}") public ApiResponse<Course> get(@PathVariable Long id){return ApiResponse.ok(repository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND,"课程不存在")));}
-    @PostMapping public ApiResponse<Course> create(@Valid @RequestBody CourseRequest request){return ApiResponse.ok(repository.save(new Course(request.title(),request.subject(),request.grade())));}
-    @PutMapping("/{id}") public ApiResponse<Course> update(@PathVariable Long id,@Valid @RequestBody CourseRequest request){Course c=repository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND,"课程不存在")); c.update(request.title(),request.subject(),request.grade(),request.status()==null?c.getStatus():request.status()); return ApiResponse.ok(repository.save(c));}
+    @PostMapping public ApiResponse<Course> create(@Valid @RequestBody CourseRequest request){Course course=new Course(request.title(),request.subject(),request.grade()); course.setContent(request.content()); return ApiResponse.ok(repository.save(course));}
+    @PutMapping("/{id}") public ApiResponse<Course> update(@PathVariable Long id,@Valid @RequestBody CourseRequest request){Course c=repository.findById(id).orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND,"课程不存在")); c.setContent(request.content()); c.update(request.title(),request.subject(),request.grade(),request.status()==null?c.getStatus():request.status()); return ApiResponse.ok(repository.save(c));}
     @DeleteMapping("/{id}") public ApiResponse<Void> delete(@PathVariable Long id){if(!repository.existsById(id))throw new ResponseStatusException(HttpStatus.NOT_FOUND,"课程不存在"); repository.deleteById(id); return ApiResponse.ok(null);}
 }

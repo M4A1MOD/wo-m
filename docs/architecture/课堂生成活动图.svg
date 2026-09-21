@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1220" viewBox="0 0 1000 1220">
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#52647a"/></marker><style>.t{font:700 30px 'Microsoft YaHei';fill:#182230}.n{font:500 18px 'Microsoft YaHei';fill:#182230}.s{font:400 14px 'Microsoft YaHei';fill:#5c6b80}.b{rx:18;ry:18;stroke:#9aabd0;stroke-width:2;fill:#fff}.l{stroke:#52647a;stroke-width:2.2;fill:none;marker-end:url(#a)}.d{fill:#eef3ff;stroke:#7f98df;stroke-width:2}</style></defs>
+  <rect width="1000" height="1220" fill="#f8fafc"/><text x="500" y="52" text-anchor="middle" class="t">教师生成并发布课堂活动图</text>
+  <circle cx="500" cy="100" r="15" fill="#26364b"/>
+  <rect x="315" y="140" width="370" height="72" class="b"/><text x="500" y="175" text-anchor="middle" class="n">创建课程并填写主题</text><text x="500" y="197" text-anchor="middle" class="s">学科 年级 课时 教学目标</text>
+  <rect x="315" y="255" width="370" height="72" class="b"/><text x="500" y="290" text-anchor="middle" class="n">可选上传参考资料</text><text x="500" y="312" text-anchor="middle" class="s">TXT Markdown PDF</text>
+  <rect x="315" y="370" width="370" height="72" class="b"/><text x="500" y="405" text-anchor="middle" class="n">保存课程草稿并请求 AI 生成</text>
+  <polygon points="500,485 650,555 500,625 350,555" class="d"/><text x="500" y="548" text-anchor="middle" class="n">AI 服务是否可用</text><text x="500" y="573" text-anchor="middle" class="s">超时 格式错误 服务异常</text>
+  <rect x="90" y="650" width="310" height="82" class="b"/><text x="245" y="685" text-anchor="middle" class="n">提示错误并提供选择</text><text x="245" y="710" text-anchor="middle" class="s">重试 或 使用模拟数据</text>
+  <rect x="600" y="650" width="310" height="82" class="b"/><text x="755" y="685" text-anchor="middle" class="n">检索资料并生成内容</text><text x="755" y="710" text-anchor="middle" class="s">大纲 场景 知识点 测验</text>
+  <rect x="315" y="785" width="370" height="82" class="b"/><text x="500" y="820" text-anchor="middle" class="n">校验 JSON 结构并保存</text><text x="500" y="845" text-anchor="middle" class="s">不合法结果不写入业务数据</text>
+  <rect x="315" y="910" width="370" height="72" class="b"/><text x="500" y="952" text-anchor="middle" class="n">教师编辑并提交审核</text>
+  <polygon points="500,1020 625,1075 500,1130 375,1075" class="d"/><text x="500" y="1082" text-anchor="middle" class="n">审核通过</text>
+  <rect x="705" y="1038" width="230" height="72" class="b"/><text x="820" y="1082" text-anchor="middle" class="n">发布课堂</text>
+  <rect x="65" y="1038" width="230" height="72" class="b"/><text x="180" y="1082" text-anchor="middle" class="n">退回继续修改</text>
+  <circle cx="820" cy="1165" r="18" fill="#26364b"/><circle cx="820" cy="1165" r="10" fill="#f8fafc"/>
+  <path d="M500 115 L500 140 M500 212 L500 255 M500 327 L500 370 M500 442 L500 485" class="l"/>
+  <path d="M350 555 C250 555 245 600 245 650" class="l"/><text x="285" y="590" class="s">否</text>
+  <path d="M650 555 C755 555 755 600 755 650" class="l"/><text x="700" y="590" class="s">是</text>
+  <path d="M245 732 C245 770 400 760 430 785" class="l"/><path d="M755 732 C755 770 600 760 570 785" class="l"/>
+  <path d="M500 867 L500 910 M500 982 L500 1020" class="l"/>
+  <path d="M625 1075 L705 1075" class="l"/><text x="660" y="1060" class="s">是</text><path d="M375 1075 L295 1075" class="l"/><text x="320" y="1060" class="s">否</text>
+  <path d="M180 1038 C180 940 285 945 315 945" class="l"/><path d="M820 1110 L820 1147" class="l"/>
+</svg>
