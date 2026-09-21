@@ -43,7 +43,6 @@ platform/
 └─ 一键停止.cmd
 ```
 
-`project-image-asset-generator` 的图片生成能力已经整合进平台源码，原始桌面应用、浏览器运行时、缓存与个人配置不进入仓库。
 
 ## 开发启动
 
